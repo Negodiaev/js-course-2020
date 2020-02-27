@@ -17,6 +17,13 @@
   },
   "homepage": "https://github.com/dosandk/course-js-20200203#readme",
   "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/preset-env": "^7.8.4",
+    "@testing-library/jest-dom": "^5.1.1",
+    "babel-jest": "^25.1.0",
+    "jest": "^25.1.0",
     "static-server": "^2.2.1"
   }
 }
