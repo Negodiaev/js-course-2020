@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<meta charset="utf-8">
+<head>
+  <title>Админка для магазина</title>
+  <link rel="apple-touch-icon-precomposed" href="src/assets/favicon/apple-touch-icon-precomposed.png">
+  <link rel="icon" href="src/assets/favicon/favicon.png">
+  <link rel="stylesheet" href="../../styles/all.css">
+</head>
+<body>
+<div class="progress-bar">
+  <div class="progress-bar__line"></div>
+</div>
+<main class="main">
+  <div class="progress-bar">
+    <div class="progress-bar__line"></div>
+  </div>
+  <aside class="sidebar">
+    <h2 class="sidebar__title"><a href="/">shop admin</a></h2>
+    <ul class="sidebar__nav">
+      <li><a href="/" data-page="dashboard"><i class="icon-dashboard"></i> <span>Dashboard</span></a></li>
+      <li><a href="/products" data-page="products"><i class="icon-products"></i> <span>Products</span></a></li>
+      <li><a href="/categories" data-page="categories"><i class="icon-categories"></i> <span>Categories</span></a></li>
+      <li><a href="/sales" data-page="sales"><i class="icon-sales"></i> <span>Sales</span></a></li>
+    </ul>
+    <ul class="sidebar__nav sidebar__nav_bottom">
+      <li>
+        <button type="button" class="sidebar__toggler"><i class="icon-toggle-sidebar"></i> <span>Toggle sidebar</span>
+        </button>
+      </li>
+    </ul>
+  </aside>
+  <section class="content" id="content">
+    <div class="dashboard">
+      <div class="content__top-panel"><h2 class="page-title">Dashboard</h2>
+        <div class="rangepicker">
+          <div class="rangepicker__input" data-elem="input">
+            <span data-elem="from">28.01.2020</span> -
+            <span data-elem="to">27.02.2020</span>
+          </div>
+          <div class="rangepicker__selector" data-elem="selector"></div>
+        </div>
+      </div>
+      <div class="dashboard__charts">
+        <div class="column-chart dashboard__chart_orders column-chart_loading">
+          <div class="column-chart__title">
+            Total orders
+            <a href="/sales" class="column-chart__link">View all</a>
+          </div>
+          <div class="column-chart__container">
+            <div class="column-chart__header"></div>
+            <div class="column-chart__chart"></div>
+          </div>
+        </div>
+        <div class="column-chart dashboard__chart_sales column-chart_loading">
+          <div class="column-chart__title">
+            Total sales
+
+          </div>
+          <div class="column-chart__container">
+            <div class="column-chart__header"></div>
+            <div class="column-chart__chart"></div>
+          </div>
+        </div>
+        <div class="column-chart dashboard__chart_customers column-chart_loading">
+          <div class="column-chart__title">
+            Total customers
+
+          </div>
+          <div class="column-chart__container">
+            <div class="column-chart__header"></div>
+            <div class="column-chart__chart"></div>
+          </div>
+        </div>
+      </div>
+      <h3 class="block-title">Best sellers</h3>
+      <div class="sortable-table sortable-table_loading">
+        <div data-elem="header" class="sortable-table__header sortable-table__row">
+          <div class="sortable-table__cell" data-name="images"><span>Image</span></div>
+          <div class="sortable-table__cell" data-name="title" data-sortable=""><span>Name</span><span
+            class="sortable-table__sort-arrow">
+          <span class="sortable-table__sort-arrow_asc"></span>
+        </span></div>
+          <div class="sortable-table__cell" data-name="category"><span>Category</span></div>
+          <div class="sortable-table__cell" data-name="quantity" data-sortable=""><span>Quantity</span></div>
+          <div class="sortable-table__cell" data-name="price" data-sortable=""><span>Price</span></div>
+          <div class="sortable-table__cell" data-name="sales" data-sortable=""><span>Sales</span></div>
+        </div>
+        <div data-elem="body" class="sortable-table__body"></div>
+        <div data-elem="loading" class="loading-line sortable-table__loading-line"></div>
+        <div data-elem="emptyPlaceholder" class="sortable-table__empty-placeholder">undefined</div>
+      </div>
+    </div>
+  </section>
+</main>
+</body>

@@ -1,0 +1,22 @@
+{
+  "name": "course-js-20200203",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "develop": "static-server ./src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dosandk/course-js-20200203.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dosandk/course-js-20200203/issues"
+  },
+  "homepage": "https://github.com/dosandk/course-js-20200203#readme",
+  "devDependencies": {
+    "static-server": "^2.2.1"
+  }
+}
