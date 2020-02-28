@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "develop": "static-server ./src"
+    "develop": "static-server ./src",
+    "eslint": "eslint \"**/*.js\"",
+    "eslint:fix": "eslint --fix \"**/*.js\"",
+    "prettier": "prettier --check \"**/*.{js,css,html,md,json}\" --write",
+    "test": "jest",
+    "test:match": "jest --findRelatedTests ./src/components/range-picker/index.spec.js"
   },
   "repository": {
     "type": "git",
@@ -22,8 +27,9 @@
     "@babel/plugin-syntax-dynamic-import": "^7.8.3",
     "@babel/preset-env": "^7.8.4",
     "@testing-library/jest-dom": "^5.1.1",
-    "babel-jest": "^25.1.0",
+    "eslint": "^6.8.0",
     "jest": "^25.1.0",
+    "prettier-eslint": "^9.0.1",
     "static-server": "^2.2.1"
   }
 }
