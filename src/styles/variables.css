@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap");
-
 :root {
   --blue: #109cf1;
   --dark-blue: #334d6e;
@@ -17,8 +15,4 @@
   --grey-extra-light: #eff1f4;
   --grey-skeleton: #f5f6f8;
   --white: #ffffff;
-}
-
-body {
-  font-family: "Source Sans Pro", sans-serif;
 }
