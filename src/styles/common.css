@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap");
-@import url("../assets/fonts/css/fontello.css");
-@import url("variables.css");
-@import url("form.css");
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+@import url('../assets/fonts/css/fontello.css');
+@import url('variables.css');
+@import url('form.css');
 
 body {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 * {
@@ -48,7 +48,7 @@ body {
 }
 
 button.is-loading::before {
-  content: "";
+  content: '';
   display: grid;
   width: 24px;
   height: 24px;
@@ -62,14 +62,12 @@ button.is-loading::before {
 }
 
 .button-primary.is-loading::before {
-  background: url("../assets/icons/icon-loading-circle-white.svg") center
-    no-repeat;
+  background: url('../assets/icons/icon-loading-circle-white.svg') center no-repeat;
   background-size: cover;
 }
 
 .button-primary-outline.is-loading::before {
-  background: url("../assets/icons/icon-loading-circle-blue.svg") center
-    no-repeat;
+  background: url('../assets/icons/icon-loading-circle-blue.svg') center no-repeat;
   background-size: cover;
 }
 

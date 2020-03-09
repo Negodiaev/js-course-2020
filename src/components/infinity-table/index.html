@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>InfinityTable</title>
+
+    <style>
+      :root {
+        --blue: #109cf1;
+        --dark-blue: #334d6e;
+        --light-blue: #cfebfc;
+        --middle-blue: #9fd7f9;
+        --yellow: #ffb946;
+        --red: #f7685b;
+        --green: #2ed47a;
+        --purple: #885af8;
+        --black: #192a3e;
+        --table-black: #323c47;
+        --table-grey: #707683;
+        --grey: #90a0b7;
+        --grey-light: #c2cfe0;
+        --grey-extra-light: #eff1f4;
+        --grey-skeleton: #f5f6f8;
+        --white: #ffffff;
+      }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="../sortable-table/style.css" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <script type="module">
+      import InfinityTable from './index.js';
+      import data from '../products-data.js';
+
+      const step = 10;
+      let start = 0;
+      let end = step;
+
+      const infinityTable = new InfinityTable(data.slice(0, end));
+      const { $element } = infinityTable;
+
+      root.append($element);
+
+      $element.addEventListener('load-data', () => {
+        start = end;
+        end += step;
+
+        console.error(start, end);
+
+        infinityTable.addRows(data.slice(start, end));
+      });
+
+      /*
+  const BACKEND_URL = 'https://course-js.javascript.ru/';
+  const BESTSELLERS = 'api/dashboard/bestsellers';
+  const url = new URL(BESTSELLERS, BACKEND_URL);
+
+  url.searchParams.set('_sort', 'title');
+  url.searchParams.set('_order', 'asc');
+
+  $element.addEventListener('load-data', () => {
+
+    url.searchParams.set('_start', `${start}`);
+    url.searchParams.set('_end', `${end}`);
+
+    console.error(start, end);
+
+    start = end;
+    end += step;
+
+    fetch(url)
+      .then(response => response.json())
+      .then(bestsellers => {
+        infinityTable.addRows(bestsellers);
+      })
+  });
+*/
+    </script>
+  </body>
+</html>

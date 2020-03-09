@@ -2,7 +2,7 @@
   max-width: 800px;
 }
 
-.product-form .form .form-group__wide [class*="button-"] {
+.product-form .form .form-group__wide [class*='button-'] {
   width: 160px;
   margin-bottom: 8px;
 }
